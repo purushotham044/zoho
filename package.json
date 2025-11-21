@@ -1,0 +1,47 @@
+{
+  "name": "brex-zoho-cliq-integration",
+  "version": "1.0.0",
+  "description": "Production-ready Brex ⇄ Zoho Cliq integration using Zoho Catalyst",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:unit": "jest --testPathPattern=unit",
+    "test:integration": "jest --testPathPattern=integration",
+    "test:e2e": "node tests/e2e/smoke.js",
+    "lint": "echo 'Linter not configured' || exit 0",
+    "deploy": "node scripts/deploy.js",
+    "deploy:dev": "node scripts/package.js && echo Package ready! Upload deploy/artifact.zip to Catalyst Console (Development)",
+    "deploy:prod": "node scripts/package.js && echo Package ready! Upload deploy/artifact.zip to Catalyst Console (Production)",
+    "deploy:full": "bash scripts/deploy-full.sh",
+    "package": "node scripts/package.js",
+    "package:ps1": "powershell -ExecutionPolicy Bypass -File scripts/package.ps1",
+    "seed:demo": "node scripts/seed-demo-data.js",
+    "validate": "node scripts/validate-deployment.js",
+    "validate:dev": "node scripts/validate-deployment.js --env=dev",
+    "validate:prod": "node scripts/validate-deployment.js --env=prod",
+    "test:webhook": "node scripts/test-webhook-signature.js",
+    "test:webhook:dev": "node scripts/test-webhook-signature.js --env=dev",
+    "test:webhook:prod": "node scripts/test-webhook-signature.js --env=prod",
+    "test:pipeline": "bash scripts/test-pipeline.sh"
+  },
+  "keywords": [
+    "brex",
+    "zoho",
+    "cliq",
+    "catalyst",
+    "integration"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "zoho-catalyst-sdk": "^1.0.0",
+    "axios": "^1.6.0",
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "@types/node": "^20.0.0",
+    "archiver": "^6.0.1"
+  }
+}
+
