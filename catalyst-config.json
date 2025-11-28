@@ -1,0 +1,11 @@
+{
+  "project_id": "54012000000013052",
+  "version": "1",
+  "deployment": {
+    "type": "advancedio",
+    "runtime": "node20",
+    "main": "index.js",
+    "handler": "handler"
+  }
+}
+
